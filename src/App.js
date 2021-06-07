@@ -16,6 +16,23 @@ import smallLogo from './assets/small-logo.png';
 import twitIcon from './assets/twit-icon.png';
 import vanPic from './assets/van-pic.png';
 
+class ButtonList extends Component {
+  render() {
+    return (
+      <div id="header-icon" className='float-right'>
+        <img className="h-icon" alt="social media button" src={fbIcon}/>
+        <img className="h-icon" alt="social media button" src={twitIcon}/>
+        <img className="h-icon" alt="social media button" src={gpIcon}/>
+        <img className="h-icon" alt="social media button" src={instaIcon}/>
+        <img className="h-icon" alt="social media button" src={flicIcon}/>
+        <img className="h-icon" alt="social media button" src={pintIcon}/>
+        <img className="h-icon" alt="social media button" src={rssIcon}/>
+        <img className="h-icon" alt="social media button" src={mailIcon}/>
+      </div>
+    )
+  }
+}
+
 class Header extends Component {
   render() {
     return (
@@ -27,16 +44,7 @@ class Header extends Component {
               <article id="subtitle">THE BEST FOOD BLOG ON THE WEB</article>
             </div> 
           </div>
-          <div id="header-icon" className='float-right'>
-            <img className="h-icon" alt="social media button" src={fbIcon}/>
-            <img className="h-icon" alt="social media button" src={twitIcon}/>
-            <img className="h-icon" alt="social media button" src={gpIcon}/>
-            <img className="h-icon" alt="social media button" src={instaIcon}/>
-            <img className="h-icon" alt="social media button" src={flicIcon}/>
-            <img className="h-icon" alt="social media button" src={pintIcon}/>
-            <img className="h-icon" alt="social media button" src={rssIcon}/>
-            <img className="h-icon" alt="social media button" src={mailIcon}/>
-          </div>
+          <ButtonList />
         </header>
     )
   }
@@ -47,6 +55,31 @@ class ThiccSpan extends Component {
     return (
         <div className="thick">
         </div>
+    )
+  }
+}
+
+class IngredientList extends Component {
+  render() {
+    return (
+      <div className="list-box">
+          <ul>
+            <li><input type="checkbox"/> 1 1/2 Cups Milk</li>
+            <li><input type="checkbox"/> 1/2 Cup Mascarpone</li>
+            <li><input type="checkbox"/> 1/2 tsp pink salt</li>
+            <li><input type="checkbox"/> 1 lb black mission figs</li>
+            <li><input type="checkbox"/> 1/2 cup brown sugar</li>
+            <li><input type="checkbox"/> 2-4 tbsp water</li>
+          </ul>
+          <ul className="list">
+            <li><input type="checkbox"/> 1 1/2 cups heavy cream</li>
+            <li><input type="checkbox" checked readOnly/> 1/3 cup granulated sugar</li>
+            <li><input type="checkbox" checked readOnly/> 2 egg yolks</li>
+            <li><input type="checkbox"/> 1 lemon, juiced</li>
+            <li><input type="checkbox"/> 2 tbsp butter</li>
+            <li><input type="checkbox"/> 1 cup honey roasted pecans, roughly chopped</li>
+          </ul>
+      </div>
     )
   }
 }
@@ -62,24 +95,7 @@ class Main extends Component {
         </div>
         <div><img className='pizza' src={chocoPizza} alt="some pizza"/></div>
         <div><p><img  className='pizza' src={lab} alt="some instructions"/></p></div>
-        <div className="list-box">
-          <ul>
-            <li><input type="checkbox"/> 1 1/2 Cups Milk</li>
-            <li><input type="checkbox"/> 1/2 Cup Mascarpone</li>
-            <li><input type="checkbox"/> 1/2 tsp pink salt</li>
-            <li><input type="checkbox"/> 1 lb black mission figs</li>
-            <li><input type="checkbox"/> 1/2 cup brown sugar</li>
-            <li><input type="checkbox"/> 2-4 tbsp water</li>
-          </ul>
-          <ul className="list">
-            <li><input type="checkbox"/> 1 1/2 cups heavy cream</li>
-            <li><input type="checkbox" checked readOnly/> 1/3 granulated sugar</li>
-            <li><input type="checkbox" checked readOnly/> 2 egg yolks</li>
-            <li><input type="checkbox"/> 1 lemon, juiced</li>
-            <li><input type="checkbox"/> 2 tbsp butter</li>
-            <li><input type="checkbox"/> 1 cup honey roasted pecans, roughly chopped</li>
-          </ul>
-        </div>
+        <IngredientList />
         <hr/>
         <div className="person-info">
           <img src={vanPic} alt="the author" className="person-pic"/>
