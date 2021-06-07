@@ -8,7 +8,6 @@ import gpIcon from './assets/gp-icon.png';
 // import hrImg from './assets/hr-img.png';
 import instaIcon from './assets/insta-icon.png';
 import lab from './assets/lab.png';
-// import listBg from './assets/list-bg.png';
 import mailIcon from './assets/mail-icon.png';
 import pintIcon from './assets/pint-icon.png';
 import printIcon from './assets/print-icon.png';
