@@ -15,6 +15,7 @@ import rssIcon from './assets/rss-icon.png';
 import smallLogo from './assets/small-logo.png';
 import twitIcon from './assets/twit-icon.png';
 import vanPic from './assets/van-pic.png';
+import { stuff1, stuff2 } from './data.js'
 
 class ButtonList extends Component {
   render() {
@@ -59,25 +60,29 @@ class ThiccSpan extends Component {
   }
 }
 
+class IngredientItem extends Component {
+  render() {
+    return (
+      <li>
+        <input type="checkbox"/> {this.props.amount} {this.props.name}
+      </li>
+    )
+  }
+}
+
 class IngredientList extends Component {
   render() {
     return (
       <div className="list-box">
           <ul>
-            <li><input type="checkbox"/> 1 1/2 Cups Milk</li>
-            <li><input type="checkbox"/> 1/2 Cup Mascarpone</li>
-            <li><input type="checkbox"/> 1/2 tsp pink salt</li>
-            <li><input type="checkbox"/> 1 lb black mission figs</li>
-            <li><input type="checkbox"/> 1/2 cup brown sugar</li>
-            <li><input type="checkbox"/> 2-4 tbsp water</li>
+            {
+              stuff1.map( (single) => <IngredientItem amount={single.amount} name={single.name}/>)
+            }
           </ul>
           <ul className="list">
-            <li><input type="checkbox"/> 1 1/2 cups heavy cream</li>
-            <li><input type="checkbox" checked readOnly/> 1/3 cup granulated sugar</li>
-            <li><input type="checkbox" checked readOnly/> 2 egg yolks</li>
-            <li><input type="checkbox"/> 1 lemon, juiced</li>
-            <li><input type="checkbox"/> 2 tbsp butter</li>
-            <li><input type="checkbox"/> 1 cup honey roasted pecans, roughly chopped</li>
+            {
+              stuff2.map( (single) => <IngredientItem amount={single.amount} name={single.name}/>)
+            }
           </ul>
       </div>
     )
