@@ -64,7 +64,7 @@ class IngredientItem extends Component {
   render() {
     return (
       <li>
-        <input type="checkbox"/> {this.props.amount} {this.props.name}
+        <input type="checkbox" checked={this.props.checked} readOnly/> {this.props.amount} {this.props.name}
       </li>
     )
   }
@@ -76,12 +76,12 @@ class IngredientList extends Component {
       <div className="list-box">
           <ul>
             {
-              stuff1.map( (single) => <IngredientItem amount={single.amount} name={single.name}/>)
+              stuff1.map( (single, index) => <IngredientItem amount={single.amount} name={single.name} checked={single.checked} key={index}/>)
             }
           </ul>
           <ul className="list">
             {
-              stuff2.map( (single) => <IngredientItem amount={single.amount} name={single.name}/>)
+              stuff2.map( (single, index) => <IngredientItem amount={single.amount} name={single.name} checked={single.checked} key={index}/>)
             }
           </ul>
       </div>
