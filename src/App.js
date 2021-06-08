@@ -89,6 +89,22 @@ class IngredientList extends Component {
   }
 }
 
+class ImageSection extends Component {
+  render() {
+    return (
+      <div><img className='pizza' src={chocoPizza} alt="some pizza"/></div>
+    )
+  }
+}
+
+class RecipieSection extends Component {
+  render() {
+    return (
+      <div><p><img  className='pizza' src={lab} alt="some instructions"/></p></div>
+    )
+  }
+}
+
 class Main extends Component {
   render() {
     return (
@@ -98,8 +114,8 @@ class Main extends Component {
           <span id="date">POSTED ON MAY 13 2021 / DESERTS</span>
           <span id="print"><img src={printIcon} alt="A print button"/>PRINT</span>
         </div>
-        <div><img className='pizza' src={chocoPizza} alt="some pizza"/></div>
-        <div><p><img  className='pizza' src={lab} alt="some instructions"/></p></div>
+        <ImageSection/>
+        <RecipieSection/>
         <IngredientList />
         <hr/>
         <div className="person-info">
